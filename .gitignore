@@ -24,6 +24,20 @@
 *.mjs
 *.cjs
 test.cpp
+
+#css files
+*.css
+*.scss
+*.sass
+*.less
+# HTML files
+*.html
+*.htm
+*.shtml
+*.shtm
+*.xhtml
+*.html5
+
 # CMake files
 CMakeCache.txt
 CMakeFiles/
