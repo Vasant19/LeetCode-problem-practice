@@ -23,7 +23,7 @@
 *.jsx
 *.mjs
 *.cjs
-
+test.cpp
 # CMake files
 CMakeCache.txt
 CMakeFiles/
