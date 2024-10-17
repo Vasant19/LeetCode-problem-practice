@@ -1,0 +1,66 @@
+# Compiled Object files
+*.o
+*.obj
+*.ilk
+*.pdb
+
+# Compiled Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+
+# python files
+*.pyc
+*.pyo
+*.pyd
+*.py
+
+# Java Script files
+*.js
+*.jsx
+*.mjs
+*.cjs
+test.cpp
+
+#css files
+*.css
+*.scss
+*.sass
+*.less
+# HTML files
+*.html
+*.htm
+*.shtml
+*.shtm
+*.xhtml
+*.html5
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*~
+
+# Other system files
+.DS_Store
+Thumbs.db
+
+# Ignore all other binary files
+*.bin
+*.dll
+*.lib
+*.so
