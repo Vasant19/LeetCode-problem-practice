@@ -7,7 +7,7 @@ Welcome to my LeetCode problem practice repository! This repository serves as do
 - **Documented Solutions**: Each solution includes clear explanations of the approach, implementation details, and how constraints are met.
 - **Algorithmic Optimizations**: I focus on optimizing algorithms and ensuring efficient solutions.
 - **Complexity Reduction**: Strategies for reducing time and space complexity will be highlighted.
-- **Programming Language**: All implementations will be done in **C++**.
+- **Programming Language**: All implementations will be done in **C++** & **Python**.
 
 ## Objectives
 
