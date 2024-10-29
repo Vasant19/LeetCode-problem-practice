@@ -24,7 +24,7 @@
 *.mjs
 *.cjs
 test.cpp
-
+test.py
 #css files
 *.css
 *.scss
