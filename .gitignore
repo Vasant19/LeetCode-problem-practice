@@ -16,7 +16,6 @@
 *.pyc
 *.pyo
 *.pyd
-*.py
 
 # Java Script files
 *.js
