@@ -16,7 +16,6 @@
 *.pyc
 *.pyo
 *.pyd
-*.py
 
 # Java Script files
 *.js
@@ -24,7 +23,7 @@
 *.mjs
 *.cjs
 test.cpp
-
+test.py
 #css files
 *.css
 *.scss
