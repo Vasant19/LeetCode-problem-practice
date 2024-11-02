@@ -1,4 +1,5 @@
 # LeetCode Problem Practice Repository
+<img src="https://img.shields.io/badge/Repo%20in%20Progress-brightgreen.svg" alt="Repo in Progress" width="150" />
 
 Welcome to my LeetCode problem practice repository! This repository serves as documentation of my journey in solving various algorithmic problems, optimizing solutions, and reducing complexity.
 
