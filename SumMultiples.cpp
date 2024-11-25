@@ -1,5 +1,5 @@
 // Problem no. 2652 link: https://leetcode.com/problems/sum-multiples/
-
+// Time complexity: O(n)
 #include <iostream>
 #include <vector>
 #include <algorithm>
