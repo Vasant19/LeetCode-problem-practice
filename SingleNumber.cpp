@@ -7,10 +7,21 @@
 #include <algorithm>
 using namespace std;
 
-
-
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        
+    }
+};
 
 int main ()
 {
-    
+    Solution s;
+    vector<int> nums = {2,2,1};
+    vector<int> nums2 = {4,1,2,1,2};
+    vector<int> nums3 = {1};
+    cout << s.singleNumber(nums) << "/n";
+    cout << s.singleNumber(nums2) << "/n";
+    cout << s.singleNumber(nums3) << "/n";
+    return 0;
 }
