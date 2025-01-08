@@ -16,7 +16,9 @@ public:
         {
             for(int j = i+1;j < height.size();j++)
            {
-                int area = min(height[i],height[j]) * (j-i);
+                int width = j-i;
+                int finalheight = min(height[i],height[j]);
+                int area = width * finalheight;
                 maxArea = max(maxArea,area);
            }
             start++;    
