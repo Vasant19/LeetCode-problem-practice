@@ -28,7 +28,6 @@ public:
             int ht = min(height[left],height[right]);
             int area = width * ht;
             maxArea = max(maxArea, width * ht);
-            
         }
         return maxArea;
     }
