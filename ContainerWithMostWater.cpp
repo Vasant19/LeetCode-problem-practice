@@ -10,18 +10,25 @@ using namespace std;
 class Solution {
 public:
     int maxArea(vector<int>& height) {
+        int n = height.size();
         int maxArea = 0;
-        int start = height[0];
-        for(int i = 0; i< height.size();i++)
+        int left = 0;
+        int right = n - 1;
+        for(int i = 0;i<n;i++)
         {
-            for(int j = i+1;j < height.size();j++)
-           {
-                int width = j-i;
-                int finalheight = min(height[i],height[j]);
-                int area = width * finalheight;
-                maxArea = max(maxArea,area);
-           }
-            start++;    
+            int width = right - left;
+            if (height[left] < height[right])
+            {
+                left++;
+            }
+            else
+            {
+                right--;
+            }
+            int ht = min(height[left],height[right]);
+            int area = width * ht;
+            maxArea = max(maxArea, width * ht);
+            
         }
         return maxArea;
     }
