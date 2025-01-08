@@ -14,20 +14,23 @@ public:
         int maxArea = 0;
         int left = 0;
         int right = n - 1;
-        for(int i = 0;i<n;i++)
+        while (left < right)
         {
-            int width = right - left;
-            if (height[left] < height[right])
-            {
-                left++;
-            }
-            else
-            {
-                right--;
-            }
-            int ht = min(height[left],height[right]);
-            int area = width * ht;
-            maxArea = max(maxArea, width * ht);
+         
+            int ht = min(height[left], height[right]);
+            int wd = right - left;
+            int area = ht * wd;
+            maxArea = max(maxArea, area);
+            height[left] < height[right] ? left++ : right--;
+            // if (height[left] < height[right])
+            // {
+            //     left++;
+            // }
+            // else
+            // {
+            //     right--;
+            // }
+
         }
         return maxArea;
     }
