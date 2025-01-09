@@ -16,26 +16,26 @@ vector<int> twoSum(vector<int>& nums, int target)
 
     sort(numWithIndex.begin(), numWithIndex.end());
 
-    int i = 0, j = nums.size() - 1;
+    int left = 0, right = nums.size() - 1;
     vector<int> ans;
     
     // Use two-pointer technique on the sorted array
-    while (i < j)
+    while (left < right)
     {
-        int pairSum = numWithIndex[i].first + numWithIndex[j].first;
+        int pairSum = numWithIndex[left].first + numWithIndex[right].first;
         if (pairSum == target)
         {
-            ans.push_back(numWithIndex[i].second);
-            ans.push_back(numWithIndex[j].second);
+            ans.push_back(numWithIndex[left].second);
+            ans.push_back(numWithIndex[right].second);
             return ans;
         }
         else if (pairSum < target)
         {
-            i++;
+            left++;
         }
         else
         {
-            j--;
+            right--;
         }
     }
     return ans; 
