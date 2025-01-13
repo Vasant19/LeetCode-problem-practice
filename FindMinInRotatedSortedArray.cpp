@@ -28,11 +28,11 @@ public:
             {
                 return mid;
             }
-            if(target < mid)
+            else if(target < mid)
             {
                 end = mid - 1;
             }
-            if (target > mid)
+            else
             {
                 start = mid + 1;
             }
