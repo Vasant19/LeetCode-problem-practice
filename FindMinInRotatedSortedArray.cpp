@@ -5,10 +5,40 @@
 #include <algorithm>
 using namespace std;
 
-class Solution {
+class Solution 
+{
 public:
-    int findMin(vector<int> &nums) {
-        
+    int findMin(vector<int> &nums) 
+    {
+        int start = 0, n = nums.size(), end = n - 1;
+        int mid = (start + end)/2;
+        int target = INT_MAX;
+        sort(nums.begin(),nums.end());
+        for (auto val : nums)
+        {
+            if(val < target)
+            {
+                target = val;
+                return target;
+            }
+        }
+        while(start <= end)
+        {
+            if(mid == target)
+            {
+                return mid;
+            }
+            if(target < mid)
+            {
+                end = mid - 1;
+            }
+            if (target > mid)
+            {
+                start = mid + 1;
+            }
+
+        } 
+    return -1;
     }
 };
 
