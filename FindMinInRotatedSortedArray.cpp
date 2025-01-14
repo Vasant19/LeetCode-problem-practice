@@ -32,13 +32,13 @@ public:
             
             // If middle element is less than previous element,
             // middle element is the minimum
-            if (nums[mid] < nums[mid - 1] ) {
+            else if (nums[mid] < nums[mid - 1] ) {
                 return nums[mid];
             }
             
             // If middle element is greater than first element,
             // minimum is in right half
-            if (nums[mid] > nums[0]) {
+            else if (nums[mid] > nums[0]) {
                 left = mid + 1;
             }
             // If middle element is less than first element,
