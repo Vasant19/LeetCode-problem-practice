@@ -13,6 +13,7 @@ public:
         while (left <= right)
         {   
             int mid = (left + right) / 2;
+            // Prevent overflow int mid = left + (right - left) / 2;
             if (nums[mid] == target);
             {
                 return mid;
