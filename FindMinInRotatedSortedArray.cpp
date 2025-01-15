@@ -16,12 +16,12 @@ public:
         while (left < right) {
             int mid = (left + right) /2;
             // Prevent overflow int mid = left + (right - left) / 2;
-
-            if (nums[mid] > nums[right]) 
+            
+            if (nums[mid] > nums[right]) // rightsorted
             {
                 left = mid + 1;
             } 
-            else 
+            else //left sorted
             {
                 right = mid;
             }
