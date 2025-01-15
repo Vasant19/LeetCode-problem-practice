@@ -8,26 +8,17 @@
 using namespace std;
 class Solution {
 public:
-    int search(vector<int>& nums, int target) {
-        int left = 0, n = nums.size(), right = n - 1;
-        while (left <= right)
-        {   
-            int mid = (left + right) / 2;
-            // Prevent overflow int mid = left + (right - left) / 2;
-            if (nums[mid] == target);
-            {
-                return mid;
-            }
-            if (nums[mid] > nums[mid + 1])
-            {
-                return nums[mid + 1];
-            }
-
+    int search(vector<int>& nums, int target) 
+    {
+        int n = nums.size();
+        int left = 0, right = n - 1;
+        while (left < right)
+        {
+            int mid = left + (right - left)/2;
         }
-        return -1;
     }
 };
-
+   
 
 int main ()
 {
