@@ -6,27 +6,23 @@
 #include <algorithm>
 using namespace std;
 
-class Solution {
+class Solution 
+{
 public:
-    int findMin(vector<int>& nums) {
-        int left = 0, right = nums.size() - 1;
-        
-        // If the array is not rotated
-        if (nums[right] >= nums[left]) return nums[0];
-        
+    int findMin(vector<int>& nums)
+    {
+        int n = nums.size();
+        int left = 0, right = n - 1;
         while (left < right) {
-            int mid = left + (right - left) / 2; // Prevent potential overflow
-            // int mid = (left + right) / 2; 
+            int mid = (left + right) /2;
             if (nums[mid] > nums[right]) {
-                // Minimum is in the right half
-                left = mid + 1;
+            left = mid + 1;
             } else {
-                // Minimum is in the left half, including mid
-                right = mid;
+            right = mid;
             }
         }
-        
-        return nums[left]; // left == right, pointing to the minimum
+        return nums[left];
+
     }
 };
 
