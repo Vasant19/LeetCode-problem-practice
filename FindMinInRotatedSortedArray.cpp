@@ -9,48 +9,27 @@ using namespace std;
 class Solution {
 public:
     int findMin(vector<int>& nums) {
-        // If there's only one element, return it
-        if (nums.size() == 1) return nums[0];
+        int left = 0, right = nums.size() - 1;
         
-        // Set two pointers: left at start and right at end
-        int left = 0;
-        int right = nums.size() - 1;
+        // If the array is not rotated
+        if (nums[right] >= nums[left]) return nums[0];
         
-        // If array is already sorted (not rotated), return first element
-        if (nums[right] > nums[left]) return nums[0];
-        
-        // Keep searching while left and right don't cross
-        while (left <= right) {
-            // Find middle point
-            int mid = (left + right) / 2;
+        while (left < right) {
+            int mid = left + (right - left) / 2; // Prevent potential overflow
             
-            // If middle element is greater than next element,
-            // next element is the minimum
-            if (nums[mid] > nums[mid + 1]) {
-                return nums[mid + 1];
-            }
-            
-            // If middle element is less than previous element,
-            // middle element is the minimum
-            else if (nums[mid] < nums[mid - 1] ) {
-                return nums[mid];
-            }
-            
-            // If middle element is greater than first element,
-            // minimum is in right half
-            else if (nums[mid] > nums[0]) {
+            if (nums[mid] > nums[right]) {
+                // Minimum is in the right half
                 left = mid + 1;
-            }
-            // If middle element is less than first element,
-            // minimum is in left half
-            else {
-                right = mid - 1;
+            } else {
+                // Minimum is in the left half, including mid
+                right = mid;
             }
         }
         
-        return -1;
+        return nums[left]; // left == right, pointing to the minimum
     }
 };
+
 
 
 int main ()
@@ -59,8 +38,10 @@ int main ()
     vector<int> nums = {3,4,5,1,2};
     vector<int> nums2 = {4,5,6,7,0,1,2};
     vector<int> nums3 = {11,13,15,17};
+    vector<int> nums4 = {4,5,1,2,3};
     cout << s.findMin(nums) << endl;
     cout << s.findMin(nums2) << endl;
     cout << s.findMin(nums3) << endl;
+    cout << s.findMin(nums4) << "\n";
     return 0;
 }   
