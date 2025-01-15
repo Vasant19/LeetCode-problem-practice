@@ -16,16 +16,21 @@ public:
         while (left < right) {
             int mid = (left + right) /2;
             // Prevent overflow int mid = left + (right - left) / 2;
-            
-            if (nums[mid] > nums[right]) // rightsorted
+
+            // If mid element is greater than the rightmost element,
+            // the minimum must be in the right half
+            if (nums[mid] > nums[right]) 
             {
                 left = mid + 1;
             } 
-            else //left sorted
+            // Otherwise, the minimum is in the left half (including mid)
+            else 
             {
                 right = mid;
             }
         }
+        // The left index will point to the minimum element
+
         return nums[left];
 
     }
