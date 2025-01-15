@@ -16,7 +16,7 @@ public:
         
         while (left < right) {
             int mid = left + (right - left) / 2; // Prevent potential overflow
-            
+            // int mid = (left + right) / 2; 
             if (nums[mid] > nums[right]) {
                 // Minimum is in the right half
                 left = mid + 1;
