@@ -16,4 +16,11 @@ public:
 
 int main ()
 {
+    Solution s;
+    vector<int> nums = {4,5,6,7,0,1,2};
+    vector<int> nums2 = {1};
+    int target = 0,target2 = 3;
+    cout << s.search(nums,target) << endl;
+    cout << s.search(nums,target2) << endl;
+    cout << s.search(nums2,target) << endl;
 }
