@@ -23,4 +23,5 @@ int main ()
     cout << s.search(nums,target) << endl;
     cout << s.search(nums,target2) << endl;
     cout << s.search(nums2,target) << endl;
+    return 0;
 }
