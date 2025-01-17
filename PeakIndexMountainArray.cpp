@@ -1,7 +1,5 @@
 // Problem no. 852 link: https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // O(logN) solution
-
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -10,15 +8,25 @@ using namespace std;
 class Solution {
 public:
     int peakIndexInMountainArray(vector<int>& arr) {
-        int ans = 0;
-        for (int i = 0;i<arr.size();i++)
+      int n = arr.size();
+      int left = 0, right = n - 1;
+      while (left <= right)
+      {
+        int mid = left + (right - left) /2;
+        if (arr[mid] >= (arr[mid + 1]) && arr[mid] >= (arr[mid - 1]))
         {
-            if (arr[i] > arr[ans])
-            {
-                ans = i;
-            }
+          return mid;
         }
-    return ans;
+        else if (arr[mid] <= arr[mid + 1])
+        {
+          left = mid + 1;
+        }
+        else
+        {
+          right = mid - 1;
+        }
+      }
+      return -1;
     }
 };
 
