@@ -1,5 +1,6 @@
 // Problem no. 852 link: https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // O(logN) solution
+// Binary search
 #include <iostream>
 #include <vector>
 #include <algorithm>
