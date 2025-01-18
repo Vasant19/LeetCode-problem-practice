@@ -12,17 +12,7 @@ class Solution
 public:
     int singleNonDuplicate(vector<int>& nums) 
     {
-        int ans = 0;
-        set<int> result;
-        int n = nums.size();
-        result.insert(nums.begin(), nums.end());
-        for(int i = 0;i<n;i++)
-        {
-            auto vals = result.find(nums[i]);
-            
-
-        }
-    return ans;
+        
     }
 };
 
