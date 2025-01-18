@@ -21,13 +21,27 @@ public:
             {
                 return mid;
             }
-            else if(nums[mid] == nums[mid-1] && (mid % 2) == 0)
+            else if(mid % 2 == 0) // when number of elements in either search space is even
             {
-                end = mid - 1;
+                if(nums[mid] = nums[mid-1])
+                {
+                    end = mid - 1;
+                }
+                else
+                {
+                    start = mid + 1;
+                }
             }
-            else 
+            else // when number of elements in either search space is odd
             {
-                start = mid + 1;
+                if(nums[mid] = nums[mid-1])
+                {
+                    start = mid + 1;
+                }
+                else
+                {
+                    end = mid - 1;
+                }
             }
         }
     return -1;
