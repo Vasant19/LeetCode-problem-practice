@@ -14,6 +14,11 @@ public:
     {
         int n = nums.size();
         int start = 0, end = n - 1;
+        // Outer edge cases when the array has only one element, otherwise heap-buffer-overflow on address
+        if (n == 1)
+        {
+            return nums[0];
+        }
         while (start <= end)
         {
             int mid = start + (end - start) /2;
@@ -45,7 +50,7 @@ public:
                     start = mid + 1;
                 }
             }
-            
+
             // when number of elements in either search space is odd
             else 
             {
