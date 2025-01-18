@@ -17,11 +17,24 @@ public:
         while (start <= end)
         {
             int mid = start + (end - start) /2;
-            if(nums[mid] != nums[mid - 1] && nums[mid] != nums[mid + 1])
+            // Edge case If mid is the first element of the array 
+            if(mid == 0 && nums[0] != nums[1])
             {
-                return mid;
+                return nums[mid];
             }
-            if(mid % 2 == 0) // when number of elements in either search space is even
+            // Edge case If mid is the last element of the array
+            else if (mid == n - 1 && nums[n - 1] != nums[n - 2])
+            {
+                return nums[mid];
+            }
+
+            // Direct Answer if mid itself is the single element
+            else if(nums[mid] != nums[mid - 1] && nums[mid] != nums[mid + 1])
+            {
+                return nums[mid];
+            }
+            // when number of elements in either search space is even
+            else if(mid % 2 == 0) 
             {
                 if(nums[mid] == nums[mid-1])
                 {
@@ -32,7 +45,9 @@ public:
                     start = mid + 1;
                 }
             }
-            else // when number of elements in either search space is odd
+            
+            // when number of elements in either search space is odd
+            else 
             {
                 if(nums[mid] == nums[mid-1])
                 {
