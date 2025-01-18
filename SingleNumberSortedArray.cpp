@@ -21,7 +21,7 @@ public:
             {
                 return mid;
             }
-            else if(mid % 2 == 0) // when number of elements in either search space is even
+            if(mid % 2 == 0) // when number of elements in either search space is even
             {
                 if(nums[mid] == nums[mid-1])
                 {
