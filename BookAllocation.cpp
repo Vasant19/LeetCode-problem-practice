@@ -9,6 +9,12 @@ using namespace std;
 
 int allocateBooks(vector<int> &arr, int n, int m)
 {
+    int sum = 0;
+    for(int i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    int st= 0, end = sum;
 
 }
 int main()
