@@ -45,7 +45,7 @@ int ParititionsPainted(vector<int> &arr,int n,int m)
     while (start <= end)
     {
         int mid = start + (end - start)/2;
-        if (isPossible(arr , n , m , mid))
+        if (isPossible(arr,n,m,mid))
         {
             ans = mid;
             end = mid - 1;
