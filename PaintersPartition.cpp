@@ -7,6 +7,26 @@
 #include <set>
 using namespace std;
 
+bool isPossible(vector<int> &arr, int n, int m,int maxallowedPainters) // O(n)
+{ 
+    int painters = 1;
+    int time = 0;
+    for(int i ;i<arr.size();i++)
+    {
+        if(time + arr[i] <= maxallowedPainters)
+        {
+            time+arr[i];
+        }
+        else // adding painters
+        {
+            painters++;
+            time = arr[i];
+        }
+    }
+    return painters <= m;
+}
+
+
 // N boards, M painters 
 int ParititionsPainted(vector<int> &arr,int n,int m)
 {
@@ -15,7 +35,26 @@ int ParititionsPainted(vector<int> &arr,int n,int m)
         return -1;
     }
     int ans = -1;
+    int sum = 0;
+    for(int i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    int start = 0,end = sum;
 
+    while (start <= end)
+    {
+        int mid = start + (end - start)/2;
+        if (isPossible(mid))
+        {
+            ans = mid;
+            end = mid - 1;
+        }
+        else
+        {
+            start = mid + 1;
+        }
+    }
 }
 
 int main()
