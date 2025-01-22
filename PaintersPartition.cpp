@@ -11,11 +11,11 @@ bool isPossible(vector<int> &arr, int n, int m,int maxallowedPainters) // O(n)
 { 
     int painters = 1;
     int time = 0;
-    for(int i ;i<arr.size();i++)
+    for(int i = 0 ;i<arr.size();i++)
     {
         if(time + arr[i] <= maxallowedPainters)
         {
-            time+arr[i];
+            time += arr[i];
         }
         else // adding painters
         {
@@ -45,7 +45,7 @@ int ParititionsPainted(vector<int> &arr,int n,int m)
     while (start <= end)
     {
         int mid = start + (end - start)/2;
-        if (isPossible(mid))
+        if (isPossible(arr , n , m , mid))
         {
             ans = mid;
             end = mid - 1;
