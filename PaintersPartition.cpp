@@ -10,9 +10,13 @@
 using namespace std;
 
 
+int ParititionsPainted(vector<int> &arr,int n,int m)
+{
 
+}
 
 int main()
 {
+    vector<int> arr = {40,30,10,20};
     return 0;
 }
