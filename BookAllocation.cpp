@@ -33,6 +33,8 @@ bool isValid(vector<int> &arr, int n, int m,int maxallowedpages) // O(n)
 
     return stu > m ? false : true;
 }
+
+// N books, M students
 int allocateBooks(vector<int> &arr, int n, int m) // O(logN * N)
 {
     // Edge case invalid answer
