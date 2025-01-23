@@ -19,7 +19,8 @@ int main()
     cout << "The value of x is: " << **ptr2 << endl; // Dereferencing the pointer to a pointer
     cout << "The address of ptr2 is: " << &ptr2 << endl;
 
-    int * ptr3 = NULL; // ptr3 is a null pointer
+    int* ptr3 = NULL; // ptr3 is a null pointer
     cout << "The value of ptr3 is: " << ptr3 << endl;
+    cout <<"Error: " << *ptr3 << endl; // This will cause a runtime error
     return 0;
 }
