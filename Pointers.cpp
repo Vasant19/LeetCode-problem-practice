@@ -18,5 +18,8 @@ int main()
     cout << "The address of ptr is: " << &ptr << endl;
     cout << "The value of x is: " << **ptr2 << endl; // Dereferencing the pointer to a pointer
     cout << "The address of ptr2 is: " << &ptr2 << endl;
+
+    int * ptr3 = NULL; // ptr3 is a null pointer
+    cout << "The value of ptr3 is: " << ptr3 << endl;
     return 0;
 }
