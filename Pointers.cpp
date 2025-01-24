@@ -28,5 +28,12 @@ int main()
     cout <<  *ptr4 << endl; // Accessing the first element of the array
     cout << *(ptr4 + 1) << endl; // Accessing the second element of the array
     cout << *(ptr4 + 2) << endl; // Accessing the third element of the array
+
+    int* ptr5 = arr;
+    int* ptr6 = ptr5 + 2; 
+    cout << boolalpha;
+    cout << ptr6- ptr5 << endl; // The difference between two pointers , subtraction possiblity
+    cout << (ptr6 > ptr5) << endl; // Comparison between two pointers
+    cout << (ptr6 == ptr5) << endl; // Comparison between two pointers
     return 0;
 }
