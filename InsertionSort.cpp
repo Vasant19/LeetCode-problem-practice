@@ -1,5 +1,5 @@
 // Foundational code on Insertion sort
-// Insertion sort is an algorithm that builds the final sorted array one item at a time.
+// It works by repeatedly picking an element and inserting it into its correct position in the sorted portion of the array, muchlike cards are sorted in a card game.
 // Time complexity: O(n^2)
 #include <iostream>
 #include <vector>
@@ -9,6 +9,6 @@ using namespace std;
 
 int main()
 {
-    
+
     return 0;
 }
