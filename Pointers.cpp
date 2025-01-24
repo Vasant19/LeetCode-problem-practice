@@ -21,6 +21,12 @@ int main()
 
     int* ptr3 = NULL; // ptr3 is a null pointer
     cout << "The value of ptr3 is: " << ptr3 << endl;
-    cout <<"Error: " << *ptr3 << endl; // This will cause a runtime error
+    // cout <<"Error: " << *ptr3 << endl; // This will cause a runtime error
+
+    int arr[5] = {1, 2, 3, 4, 5};
+    int* ptr4 = arr; // ptr4 points to the first element of the array
+    cout << "The value of the first element of the array is: " << *ptr4 << endl;
+    cout << *(ptr4 + 1) << endl; // Accessing the second element of the array
+    cout << *(ptr4 + 2) << endl; // Accessing the third element of the array
     return 0;
 }
