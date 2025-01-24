@@ -1,7 +1,7 @@
 // Foundational concepts: for Sorting algorithms, Bubble sort.
 // This is an implementation of the Optimezed Bubble Sort algorithm in C++.
 // Bubble sort is an algorithm that compares two adjacent elements and swaps them if they are in the wrong order.
-
+// Time complexity: O(n^2)
 #include <iostream>
 #include <vector>
 #include <algorithm>
