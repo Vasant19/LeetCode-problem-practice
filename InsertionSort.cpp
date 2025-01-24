@@ -12,7 +12,7 @@ void InsertionSort(int arr[],int n)
     {
         int current = arr[i];
         int prev = i-1;
-        while (arr[prev] < current && prev >= 0)
+        while (arr[prev] > current && prev >= 0) // Change the sign to sort in descending order
         {
             arr[prev+1] = arr[prev];
             prev--;
