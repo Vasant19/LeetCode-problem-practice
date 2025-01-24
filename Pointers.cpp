@@ -24,7 +24,7 @@ int main()
     // cout <<"Error: " << *ptr3 << endl; // This will cause a runtime error
 
     int arr[5] = {1, 2, 3, 4, 5};
-    int* ptr4 = arr; // ptr4 points to the first element of the array
+    int* ptr4 = arr; // ptr4 points to the first element of the array, Constant pointer ,cannot be changed
     cout <<  *ptr4 << endl; // Accessing the first element of the array
     cout << *(ptr4 + 1) << endl; // Accessing the second element of the array
     cout << *(ptr4 + 2) << endl; // Accessing the third element of the array
