@@ -12,16 +12,16 @@ void bubblesort(int arr[],int n)
     // TC = O(n^2)
     for (int i = 0;i<n-1;i++)
     {
-        bool isSwap = false;
+        bool isSwap = false; // Optimization boolean to check if the array is already sorted
         for (int j = 0;j < n-i-1; j++)
         {
             if (arr[j] > arr[j+1])
             {
                 swap(arr[j],arr[j+1]);
-                isSwap = true;
+                isSwap = true; // Optimization
             }
         }
-        if (!isSwap)
+        if (!isSwap) // Optimization
         {
             return;
         }
@@ -30,7 +30,7 @@ void bubblesort(int arr[],int n)
 
 void printarray(int arr[],int n)
 {
-    for (int i = 0;i<n-1;i++)
+    for (int i = 0;i<n;i++)
     {
         cout << arr[i] << "\n";
     }
