@@ -1,5 +1,8 @@
 // Problem no. 75 link: https://leetcode.com/problems/sort-colors/
-// Most optimized solution
+// Most optimal solution in One pass algorithm 
+// Time complexity: O(n) ,Space complexity: O(1)
+// Dutch Flag Algorithm
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,7 +11,12 @@ using namespace std;
 class Solution { 
 public:
     void sortColors(vector<int>& nums) {
-
+        int n = nums.size();
+        int mid = 0, low = 0, high = n - 1;
+        while (mid <= high)
+        {
+         
+        }
     }
 };
 
