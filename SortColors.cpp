@@ -1,13 +1,38 @@
 // Problem no. 75 link: https://leetcode.com/problems/sort-colors/
+// overall time complexity is O(n) for the solution
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-class Solution {
+class Solution { 
 public:
     void sortColors(vector<int>& nums) {
-        
+       int countofzeros = 0;
+         int countofones = 0;
+            int countoftwos = 0;
+
+            // O(n) time complexity
+            for (int i = 0; i < nums.size(); i++)
+            {
+                if (nums[i] == 0) countofzeros++;
+                else if (nums[i] == 1) countofones++;
+                else countoftwos++;  
+            }
+            // O(n) time complexity
+            int idx = 0;
+            for (int i = 0; i < countofzeros; i++)
+            {
+                nums[idx++] = 0;
+            }
+            for (int i = 0; i < countofones; i++)
+            {
+                nums[idx++] = 1;
+            }
+            for (int i = 0; i < countoftwos; i++)
+            {
+                nums[idx++] = 2;
+            }
     }
 };
 
