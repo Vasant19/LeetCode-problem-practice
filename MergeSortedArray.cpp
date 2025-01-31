@@ -17,11 +17,31 @@ public:
 int main ()
 {
     Solution sol;
-    vector<int>nums1 = {1,2,3,0,0,0};
-    vector<int>nums2= {2,5,6};
-    int m = 3, n = 3;
-    
 
+    vector<int>nums1 = {1,2,3,0,0,0}, nums2= {2,5,6};
+    int m = 3, n = 3;
+    sol.merge(nums1, m, nums2, n);
+    for (int i = 0; i < nums1.size(); i++)
+    {
+        cout << nums1[i] << " ";
+    }
+    cout << endl;
+
+    vector<int> nums3 = {1}, nums4 = {};
+    int m2 = 1, n2 = 0;
+    sol.merge(nums3, m2, nums4, n2);
+    for (int i = 0; i < nums3.size(); i++) {
+        cout << nums3[i] << " ";
+    }
+    cout << endl;
+
+    vector<int> nums5 = {0}, nums6 = {1};
+    int m3 = 0, n3 = 1;
+    sol.merge(nums5, m3, nums6, n3);
+    for (int i = 0; i < nums5.size(); i++) {
+        cout << nums5[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
