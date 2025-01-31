@@ -1,5 +1,6 @@
 // Problem no. 88 link: https://leetcode.com/problems/merge-sorted-array/
 // O(1) space complexity , O(m+n) time complexity
+// Similar concept is used in merge sort algorithm with O(nlogn) time complexity
 #include <iostream>
 #include <vector>
 #include <algorithm>
