@@ -1,5 +1,5 @@
 // Problem no. 88 link: https://leetcode.com/problems/merge-sorted-array/
-
+// O(1) space complexity , O(m+n) time complexity
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -23,6 +23,13 @@ public:
                 j--;
                 idx--;
             }
+        
+        }
+        while (j >= 0)
+        {
+            nums1[idx] = nums2[j];
+            j--;
+            idx--;
         }
     }
 };
