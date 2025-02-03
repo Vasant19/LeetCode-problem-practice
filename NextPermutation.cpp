@@ -13,5 +13,12 @@ public:
 
 int main()
 {
+    Solution sol;
+    vector<int> nums = {1, 2, 3};
+    vector<int> nums2 = {3, 2, 1};
+    vector<int> nums3 = {1, 1, 5};
+    sol.nextPermutation(nums);
+    sol.nextPermutation(nums2);
+    sol.nextPermutation(nums3);
     return 0;
 }
