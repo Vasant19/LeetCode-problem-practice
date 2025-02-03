@@ -3,7 +3,7 @@
 // Find the pivot (special element) which is the first element that is smaller than the element after it
 #include <iostream>
 #include <vector>
-#include <algorithm> // for reverse and swap
+#include <algorithm> 
 using namespace std;
 
 class Solution {
